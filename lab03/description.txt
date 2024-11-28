@@ -3,3 +3,13 @@
 -determine no of columns returned by the query that returns an additional row containing null values?
 
 query: 
+case 1:
+select ? from table1 UNION select NULL
+-error -> incorrect number of columns
+
+select ? from table1 UNION select NULL, NULL, NULL
+-200 response code -> correct number of columns
+
+case 2:
+
+select a, b from table1 order by 3
