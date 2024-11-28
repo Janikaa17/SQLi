@@ -1,0 +1,5 @@
+-vulnerability in the product category filter. 
+-using union attack
+-determine no of columns returned by the query that returns an additional row containing null values?
+
+query: 
