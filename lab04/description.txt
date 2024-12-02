@@ -1,0 +1,6 @@
+-vulnerability in the product category filter
+-UNION attack to retrieve data from other tables
+-determine the number of columns returned by the query
+-identify a column that is compatible with string data
+
+' UNION select NULL, 'a', NULL--
