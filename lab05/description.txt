@@ -1,0 +1,4 @@
+-vulnerability in the product category filter
+-UNION attack to retrieve data
+-table as 'users' with columns- username and password
+-login as administrator along with the respective password
