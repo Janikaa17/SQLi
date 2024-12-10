@@ -2,3 +2,5 @@
 -UNION attack to retrieve data
 -table as 'users' with columns- username and password
 -login as administrator along with the respective password
+
+payload: " ' union select username, password from users-- "
