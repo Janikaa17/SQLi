@@ -65,6 +65,5 @@ if __name__ == "__main__":
                 print("[-] Did not find the administrator password.")
         else:
             print("Did not find the username and/or the password columns.")
-
     else:
         print("Did not find a users table.")
